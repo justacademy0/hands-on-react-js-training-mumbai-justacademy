@@ -104,18 +104,22 @@
         }
         
         .btn {
-            display: inline-block;
-            padding: 10px 25px;
-            background: #2563eb;
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-right: 2px;
-            margin-bottom: 15px;
-            border: 2px solid #2563eb;
-        }
+    display: inline-flex;  /* Changed from inline-block */
+    align-items: center;   /* Better vertical alignment */
+    justify-content: center; /* Better horizontal alignment */
+    padding: 8px 20px;     /* Slightly reduced padding */
+    background: #2563eb;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #2563eb;
+    font-size: 14px;       /* Explicit font size */
+    white-space: nowrap;   /* Prevent text wrapping */
+    min-width: 120px;      /* Minimum width */
+    text-align: center;    /* Ensure text stays centered */
+}
         
         .btn:hover {
             background: transparent;
@@ -271,6 +275,53 @@
             .placement {
                 padding: 30px 20px;
             }
+
+            /* For tablets */
+@media (max-width: 768px) {
+    .btn {
+        padding: 6px 16px;
+        font-size: 13px;
+        min-width: 110px;
+    }
+    .logo {
+        font-size: 20px;  /* Reduce logo size */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .btn {
+        padding: 5px 12px;
+        font-size: 12px;
+        min-width: 100px;
+    }
+    .nav-container {
+        gap: 10px;  /* Space between logo and button */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+    .btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-width: 90px;
+    }
+
+    /* Add to your existing CSS */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;  /* Allow wrapping if needed */
+    gap: 15px;       /* Space between items */
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;       /* Space between buttons if you add more */
+}
+}
         }
     </style>
 </head>
@@ -278,13 +329,15 @@
     <div id="particles-js"></div>
     
     <header>
-        <div class="container">
-            <div class="nav-container">
-                <a href="https://www.justacademy.co/" class="logo">Just<span>Academy</span></a>
-                <a href="https://www.justacademy.co/register-for-course-demo" class="btn">Book Free Demo</a>
+    <div class="container">
+        <div class="nav-container">
+            <a href="https://www.justacademy.co/" class="logo">Just<span>Academy</span></a>
+            <div class="nav-actions">  <!-- New wrapper div -->
+                <a href="https://www.justacademy.co/register-for-course-demo" class="btn">Book Demo</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
     
     <section class="hero">
         <div class="container">
