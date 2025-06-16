@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React JS Training in Mumbai | Hands-on Course | JustAcademy</title>
     <meta name="description" content="Join our hands-on React JS training in Mumbai. Learn from industry experts with practical projects. Free demo session available. Placement assistance provided. Enroll now!">
-    <meta name="keywords" content="react js training mumbai, react course mumbai, hands on react training, react js certification mumbai, frontend development course, javascript framework course, react developer course, web development training mumbai, hands on react js course">
+    <meta name="keywords" content="react js training mumbai, react course mumbai, hands on react training, react js certification mumbai, frontend development course, javascript framework course, react developer course, web development training mumbai">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -23,17 +23,18 @@
             overflow-x: hidden;
         }
         
-        /* Navbar Styles */
+        /* Navbar Styles - Enhanced */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(15, 32, 39, 0.95);
+            background: rgba(15, 32, 39, 0.97);
             z-index: 1000;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             padding: 15px 0;
             transition: all 0.4s ease;
+            backdrop-filter: blur(8px);
         }
         
         .navbar.scrolled {
@@ -56,28 +57,37 @@
             font-size: 28px;
             color: #fff;
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
         
         .logo span {
             color: #61dafb;
         }
         
+        .logo i {
+            margin-right: 10px;
+            color: #61dafb;
+            font-size: 24px;
+        }
+        
         .nav-links {
             display: flex;
             list-style: none;
+            align-items: center;
         }
         
         .nav-links li {
-            margin: 0 15px;
+            margin: 0 10px;
         }
         
         .nav-links a {
-            color: #fff;
+            color: #f0f8ff;
             text-decoration: none;
             font-weight: 500;
             font-size: 16px;
             position: relative;
-            padding: 5px 0;
+            padding: 8px 0;
             transition: all 0.3s ease;
         }
         
@@ -101,6 +111,31 @@
             color: #61dafb;
         }
         
+        /* Improved Book Demo Button */
+        .nav-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #61dafb;
+            color: #0f2027;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 15px;
+            border: 2px solid #61dafb;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
+            font-size: 14px;
+        }
+        
+        .nav-btn:hover {
+            background: transparent;
+            color: #61dafb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(97, 218, 251, 0.4);
+        }
+        
         .mobile-toggle {
             display: none;
             font-size: 24px;
@@ -108,6 +143,7 @@
             background: none;
             border: none;
             cursor: pointer;
+            margin-left: 15px;
         }
         
         /* Hero Section */
@@ -134,6 +170,7 @@
             z-index: 10;
             animation: fadeInUp 1s ease;
             margin-top: 80px;
+            padding: 0 20px;
         }
         
         .hero h1 {
@@ -152,6 +189,7 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
             max-width: 600px;
+            opacity: 0.9;
         }
         
         .btn {
@@ -190,13 +228,13 @@
         
         /* Course Details */
         .section {
-            padding: 80px 0;
+            padding: 100px 0;
             position: relative;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
         
         .section-title h2 {
@@ -262,10 +300,11 @@
         }
         
         .module-content li {
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px dashed #eee;
             position: relative;
-            padding-left: 25px;
+            padding-left: 30px;
+            font-size: 15px;
         }
         
         .module-content li:last-child {
@@ -309,6 +348,7 @@
         
         .feature-card:hover {
             transform: translateY(-10px);
+            background: rgba(255,255,255,0.08);
         }
         
         .feature-icon {
@@ -317,32 +357,125 @@
             margin-bottom: 20px;
         }
         
-        /* CTA Section */
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Enhanced CTA Section */
         .cta-section {
             text-align: center;
-            padding: 100px 0;
-            background: #f0f8ff;
+            padding: 140px 0;
             position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+        
+        .cta-container {
+            position: relative;
+            z-index: 10;
         }
         
         .cta-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: #0f2027;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-family: 'Montserrat', sans-serif;
         }
         
         .cta-section p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             max-width: 700px;
-            margin: 0 auto 40px;
-            color: #444;
+            margin: 0 auto 50px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: #61dafb;
+            color: #0f2027;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 18px;
+            border: 2px solid #61dafb;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(97, 218, 251, 0.4);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-btn:hover:before {
+            left: 100%;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: #61dafb;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(97, 218, 251, 0.6);
+        }
+        
+        .cta-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .cta-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(97, 218, 251, 0.15);
+        }
+        
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            right: 10%;
+        }
+        
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: 10%;
+            left: 8%;
+        }
+        
+        .circle-3 {
+            width: 150px;
+            height: 150px;
+            bottom: 25%;
+            right: 20%;
         }
         
         /* Footer */
         footer {
             background: #0c1920;
             color: #fff;
-            padding: 40px 0 20px;
+            padding: 60px 0 20px;
             text-align: center;
         }
         
@@ -350,25 +483,29 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .footer-links a {
             color: #61dafb;
-            margin: 0 15px;
+            margin: 0 20px 15px;
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
+            font-size: 16px;
         }
         
         .footer-links a:hover {
-            opacity: 0.8;
+            color: #fff;
+            text-decoration: underline;
         }
         
         .copyright {
             color: #aaa;
             font-size: 0.9rem;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         /* Animations */
@@ -380,6 +517,18 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(97, 218, 251, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(97, 218, 251, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(97, 218, 251, 0);
             }
         }
         
@@ -406,6 +555,13 @@
                 text-align: center;
             }
             
+            .nav-btn {
+                margin: 20px auto 0;
+                display: block;
+                width: 180px;
+                text-align: center;
+            }
+            
             .mobile-toggle {
                 display: block;
             }
@@ -413,36 +569,51 @@
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+                text-align: center;
+            }
+            
+            .hero p {
+                text-align: center;
+                margin: 0 auto 30px;
             }
             
             .btn {
                 display: block;
-                width: 100%;
-                margin-bottom: 15px;
+                width: 80%;
+                margin: 15px auto;
                 text-align: center;
             }
             
             .hero-content {
                 text-align: center;
+                padding-top: 40px;
             }
             
-            .hero p {
-                margin: 0 auto 30px;
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.4rem;
+            }
+            
+            .cta-section {
+                padding: 100px 0;
             }
         }
         
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .cta-section h2 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
             .footer-links {
@@ -452,6 +623,15 @@
             .footer-links a {
                 margin: 10px 0;
             }
+            
+            .logo {
+                font-size: 22px;
+            }
+            
+            .cta-btn {
+                padding: 15px 35px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -459,14 +639,17 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Just<span>Academy</span></a>
+            <a href="#" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Just<span>Academy</span>
+            </a>
             
             <ul class="nav-links">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#modules">Course Modules</a></li>
+                <li><a href="#modules">Modules</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.justacademy.co/register-for-course-demo" class="btn btn-outline">Book Demo</a></li>
+                <li><a href="https://www.justacademy.co/register-for-course-demo" class="nav-btn">Book Demo</a></li>
             </ul>
             
             <button class="mobile-toggle">
@@ -493,6 +676,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Course Modules</h2>
+                <p>Comprehensive curriculum designed for practical, hands-on learning</p>
             </div>
             <div class="modules-container">
                 <div class="module-card">
@@ -567,6 +751,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose Our React JS Training?</h2>
+                <p>Industry-leading program designed for career success</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -596,12 +781,19 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Enhanced CTA Section -->
     <section class="cta-section">
-        <div class="container">
+        <div class="cta-decoration">
+            <div class="cta-circle circle-1"></div>
+            <div class="cta-circle circle-2"></div>
+            <div class="cta-circle circle-3"></div>
+        </div>
+        <div class="container cta-container">
             <h2>Ready to Launch Your Career in React Development?</h2>
             <p>Join our hands-on React JS training in Mumbai and gain the skills that top companies are looking for. Limited seats available for the next batch!</p>
-            <a href="https://www.justacademy.co/register-for-course-demo" class="btn">Book Your Free Demo Now</a>
+            <a href="https://www.justacademy.co/register-for-course-demo" class="cta-btn">
+                <i class="fas fa-calendar-check"></i> Book Your Free Demo Now
+            </a>
         </div>
     </section>
 
@@ -612,8 +804,9 @@
                 <a href="https://www.justacademy.co/student-placed">Placement Assistance</a>
                 <a href="https://www.justacademy.co/course-detail/react-js-training">Course Details</a>
                 <a href="https://www.justacademy.co/contact">Contact Us</a>
+                <a href="https://www.justacademy.co/">All Courses</a>
             </div>
-            <p class="copyright">© 2023 JustAcademy - React JS Training in Mumbai. All Rights Reserved.</p>
+            <p class="copyright">© 2023 JustAcademy - React JS Training in Mumbai. All Rights Reserved. Join our hands-on training program and become a React expert in just 12 weeks!</p>
         </div>
     </footer>
 
@@ -623,10 +816,10 @@
         // Initialize particles.js
         particlesJS('particles-js', {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
+                number: { value: 100, density: { enable: true, value_area: 800 } },
                 color: { value: "#61dafb" },
                 shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
-                opacity: { value: 0.5, random: true },
+                opacity: { value: 0.6, random: true },
                 size: { value: 3, random: true },
                 line_linked: {
                     enable: true,
@@ -637,7 +830,7 @@
                 },
                 move: {
                     enable: true,
-                    speed: 2,
+                    speed: 2.5,
                     direction: "none",
                     random: true,
                     straight: false,
@@ -653,8 +846,8 @@
                     resize: true
                 },
                 modes: {
-                    grab: { distance: 140, line_linked: { opacity: 1 } },
-                    push: { particles_nb: 4 }
+                    grab: { distance: 160, line_linked: { opacity: 1 } },
+                    push: { particles_nb: 6 }
                 }
             },
             retina_detect: true
