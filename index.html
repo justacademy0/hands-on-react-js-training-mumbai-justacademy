@@ -3,834 +3,433 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React JS Training in Mumbai | Hands-on Course | JustAcademy</title>
-    <meta name="description" content="Join our hands-on React JS training in Mumbai. Learn from industry experts with practical projects. Free demo session available. Placement assistance provided. Enroll now!">
-    <meta name="keywords" content="react js training mumbai, react course mumbai, hands on react training, react js certification mumbai, frontend development course, javascript framework course, react developer course, web development training mumbai">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Hands-on React JS Training in Mumbai | JustAcademy</title>
+    <meta name="description" content="Join our hands-on React JS training in Mumbai. Practical learning, expert instructors, placement assistance. Book a free demo session today!">
+    <meta name="keywords" content="React JS training Mumbai, hands-on React course, React development Mumbai, React JS classes, frontend development training, JavaScript framework course, Mumbai tech training, placement assistance React">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
             color: #333;
-            background: #f8f9fa;
+            line-height: 1.6;
             overflow-x: hidden;
         }
         
-        /* Navbar Styles - Enhanced */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
+        #particles-js {
+            position: absolute;
             width: 100%;
-            background: rgba(15, 32, 39, 0.97);
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(8px);
-        }
-        
-        .navbar.scrolled {
-            padding: 10px 0;
-            background: rgba(15, 32, 39, 0.98);
+            height: 100vh;
+            z-index: -1;
         }
         
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
             font-size: 28px;
-            color: #fff;
+            font-weight: 700;
+            color: #2563eb;
             text-decoration: none;
-            display: flex;
-            align-items: center;
         }
         
         .logo span {
-            color: #61dafb;
+            color: #0f172a;
         }
         
-        .logo i {
-            margin-right: 10px;
-            color: #61dafb;
-            font-size: 24px;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-        
-        .nav-links li {
-            margin: 0 10px;
-        }
-        
-        .nav-links a {
-            color: #f0f8ff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            position: relative;
-            padding: 8px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #61dafb;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover:after,
-        .nav-links a.active:after {
-            width: 100%;
-        }
-        
-        .nav-links a:hover {
-            color: #61dafb;
-        }
-        
-        /* Improved Book Demo Button */
-        .nav-btn {
-            display: inline-block;
-            padding: 10px 24px;
-            background: #61dafb;
-            color: #0f2027;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-left: 15px;
-            border: 2px solid #61dafb;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
-            font-size: 14px;
-        }
-        
-        .nav-btn:hover {
-            background: transparent;
-            color: #61dafb;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(97, 218, 251, 0.4);
-        }
-        
-        .mobile-toggle {
-            display: none;
-            font-size: 24px;
-            color: #fff;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-left: 15px;
-        }
-        
-        /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden;
-            padding-top: 0;
-        }
-        
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            z-index: -1;
+            padding: 80px 0;
         }
         
         .hero-content {
-            max-width: 700px;
-            color: #fff;
+            max-width: 650px;
+            position: relative;
             z-index: 10;
-            animation: fadeInUp 1s ease;
-            margin-top: 80px;
-            padding: 0 20px;
         }
         
         .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             line-height: 1.2;
             margin-bottom: 20px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: #0f172a;
         }
         
-        .hero h1 span {
-            color: #61dafb;
+        .highlight {
+            color: #2563eb;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight:after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(37, 99, 235, 0.2);
+            z-index: -1;
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            max-width: 600px;
-            opacity: 0.9;
+            color: #334155;
         }
         
         .btn {
             display: inline-block;
             padding: 14px 32px;
-            background: #61dafb;
-            color: #0f2027;
+            background: #2563eb;
+            color: white;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-right: 15px;
-            margin-top: 10px;
-            border: 2px solid #61dafb;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(97, 218, 251, 0.3);
+            margin-right: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #2563eb;
         }
         
         .btn:hover {
             background: transparent;
-            color: #61dafb;
+            color: #2563eb;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(97, 218, 251, 0.4);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
         }
         
-        .btn-outline {
+        .btn-secondary {
             background: transparent;
-            color: #61dafb;
+            color: #2563eb;
+            border: 2px solid #2563eb;
         }
         
-        .btn-outline:hover {
-            background: #61dafb;
-            color: #0f2027;
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: white;
         }
         
-        /* Course Details */
-        .section {
-            padding: 100px 0;
+        section {
+            padding: 80px 0;
             position: relative;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
-            color: #0f2027;
+            margin-bottom: 50px;
+            color: #0f172a;
             position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
         }
         
-        .section-title h2:after {
+        .section-title:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: #61dafb;
+            background: #2563eb;
             border-radius: 2px;
         }
         
         .modules-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
         
         .module-card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid #2563eb;
         }
         
         .module-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
         }
         
-        .module-header {
-            background: #0f2027;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
+        .module-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #0f172a;
         }
         
-        .module-icon {
-            font-size: 24px;
-            margin-right: 15px;
-            color: #61dafb;
-        }
-        
-        .module-content {
-            padding: 25px;
-        }
-        
-        .module-content ul {
+        .module-card ul {
             list-style-type: none;
         }
         
-        .module-content li {
-            padding: 10px 0;
-            border-bottom: 1px dashed #eee;
+        .module-card li {
+            padding: 8px 0;
             position: relative;
-            padding-left: 30px;
-            font-size: 15px;
+            padding-left: 25px;
         }
         
-        .module-content li:last-child {
-            border-bottom: none;
-        }
-        
-        .module-content li:before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+        .module-card li:before {
+            content: '✓';
             position: absolute;
             left: 0;
-            color: #61dafb;
+            color: #2563eb;
+            font-weight: bold;
         }
         
-        /* Features */
-        .features {
-            background: linear-gradient(to right, #0f2027, #203a43);
-            color: #fff;
-        }
-        
-        .features .section-title h2 {
-            color: #fff;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            padding: 30px;
+        .placement {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 50px;
             text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease;
         }
         
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255,255,255,0.08);
-        }
-        
-        .feature-icon {
-            font-size: 48px;
-            color: #61dafb;
+        .placement h2 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
         
-        .feature-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+        .placement p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
         }
         
-        /* Enhanced CTA Section */
-        .cta-section {
-            text-align: center;
-            padding: 140px 0;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
-        }
-        
-        .cta-container {
-            position: relative;
-            z-index: 10;
-        }
-        
-        .cta-section h2 {
-            font-size: 3rem;
-            margin-bottom: 25px;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .cta-section p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 50px;
-            color: rgba(255,255,255,0.9);
-            line-height: 1.8;
-        }
-        
-        .cta-btn {
-            display: inline-block;
-            padding: 18px 45px;
-            background: #61dafb;
-            color: #0f2027;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 18px;
-            border: 2px solid #61dafb;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(97, 218, 251, 0.4);
-            position: relative;
-            overflow: hidden;
-            animation: pulse 2s infinite;
-        }
-        
-        .cta-btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .cta-btn:hover:before {
-            left: 100%;
-        }
-        
-        .cta-btn:hover {
-            background: transparent;
-            color: #61dafb;
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(97, 218, 251, 0.6);
-        }
-        
-        .cta-decoration {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .cta-circle {
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid rgba(97, 218, 251, 0.15);
-        }
-        
-        .circle-1 {
-            width: 200px;
-            height: 200px;
-            top: 15%;
-            right: 10%;
-        }
-        
-        .circle-2 {
-            width: 300px;
-            height: 300px;
-            bottom: 10%;
-            left: 8%;
-        }
-        
-        .circle-3 {
-            width: 150px;
-            height: 150px;
-            bottom: 25%;
-            right: 20%;
-        }
-        
-        /* Footer */
         footer {
-            background: #0c1920;
-            color: #fff;
-            padding: 60px 0 20px;
-            text-align: center;
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 50px 0 20px;
         }
         
-        .footer-links {
+        .footer-content {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             flex-wrap: wrap;
             margin-bottom: 40px;
         }
         
-        .footer-links a {
-            color: #61dafb;
-            margin: 0 20px 15px;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 16px;
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
         }
         
-        .footer-links a:hover {
-            color: #fff;
-            text-decoration: underline;
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
         }
         
-        .copyright {
-            color: #aaa;
-            font-size: 0.9rem;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(97, 218, 251, 0.5);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(97, 218, 251, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(97, 218, 251, 0);
-            }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                flex-direction: column;
-                background: rgba(15, 32, 39, 0.98);
-                width: 300px;
-                height: calc(100vh - 70px);
-                padding: 40px 0;
-                transition: right 0.4s ease;
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-                text-align: center;
-            }
-            
-            .nav-btn {
-                margin: 20px auto 0;
-                display: block;
-                width: 180px;
-                text-align: center;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
         }
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.8rem;
-                text-align: center;
-            }
-            
-            .hero p {
-                text-align: center;
-                margin: 0 auto 30px;
+                font-size: 2.5rem;
             }
             
             .btn {
                 display: block;
-                width: 80%;
-                margin: 15px auto;
+                width: 100%;
+                margin-right: 0;
                 text-align: center;
             }
             
-            .hero-content {
-                text-align: center;
-                padding-top: 40px;
-            }
-            
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-            
-            .cta-section h2 {
-                font-size: 2.4rem;
-            }
-            
-            .cta-section {
-                padding: 100px 0;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .cta-section h2 {
-                font-size: 2rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-            }
-            
-            .footer-links a {
-                margin: 10px 0;
-            }
-            
-            .logo {
-                font-size: 22px;
-            }
-            
-            .cta-btn {
-                padding: 15px 35px;
-                font-size: 16px;
+            .placement {
+                padding: 30px 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <div id="particles-js"></div>
+    
+    <header>
         <div class="container">
-            <a href="#" class="logo">
-                <i class="fas fa-graduation-cap"></i>
-                Just<span>Academy</span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#modules">Modules</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.justacademy.co/register-for-course-demo" class="nav-btn">Book Demo</a></li>
-            </ul>
-            
-            <button class="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-container">
+                <a href="https://www.justacademy.co/" class="logo">Just<span>Academy</span></a>
+                <a href="https://www.justacademy.co/register-for-course-demo" class="btn">Book Free Demo</a>
+            </div>
         </div>
-    </nav>
-
-    <!-- Hero Section with Particle Background -->
+    </header>
+    
     <section class="hero">
-        <div id="particles-js"></div>
         <div class="container">
             <div class="hero-content">
-                <h1>Hands-on <span>React JS</span> Training in Mumbai</h1>
-                <p>Master React JS with our industry-led training program. Build real-world applications and become job-ready with our hands-on approach and expert mentorship.</p>
-                <a href="https://www.justacademy.co/register-for-course-demo" class="btn">Book a Free Demo Session</a>
-                <a href="https://www.justacademy.co/" class="btn btn-outline">Explore All Courses</a>
+                <h1>Hands-on <span class="highlight">React JS Training</span> in Mumbai</h1>
+                <p>Master React JS with our industry-focused training program. Learn from experts, work on real-world projects, and get placement assistance to launch your career as a React developer.</p>
+                <div class="hero-btns">
+                    <a href="https://www.justacademy.co/course-detail/react-js-training" class="btn">Course Details</a>
+                    <a href="https://www.justacademy.co/register-for-course-demo" class="btn btn-secondary">Enroll Now</a>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Course Modules Section -->
-    <section class="section" id="modules">
+    
+    <section id="course-details">
         <div class="container">
-            <div class="section-title">
-                <h2>Course Modules</h2>
-                <p>Comprehensive curriculum designed for practical, hands-on learning</p>
-            </div>
+            <h2 class="section-title">React JS Course Modules</h2>
             <div class="modules-container">
                 <div class="module-card">
-                    <div class="module-header">
-                        <i class="fas fa-cube module-icon"></i>
-                        <h3>React Fundamentals</h3>
-                    </div>
-                    <div class="module-content">
-                        <ul>
-                            <li>Introduction to React and its ecosystem</li>
-                            <li>JSX syntax and components</li>
-                            <li>State and props management</li>
-                            <li>Component lifecycle methods</li>
-                            <li>Hands-on component building</li>
-                        </ul>
-                    </div>
+                    <h3>React Fundamentals</h3>
+                    <ul>
+                        <li>Introduction to React</li>
+                        <li>JSX & Virtual DOM</li>
+                        <li>Components & Props</li>
+                        <li>State & Lifecycle</li>
+                        <li>Handling Events</li>
+                    </ul>
                 </div>
                 
                 <div class="module-card">
-                    <div class="module-header">
-                        <i class="fas fa-code module-icon"></i>
-                        <h3>Advanced React</h3>
-                    </div>
-                    <div class="module-content">
-                        <ul>
-                            <li>Hooks (useState, useEffect, custom hooks)</li>
-                            <li>Context API for state management</li>
-                            <li>Higher-Order Components (HOCs)</li>
-                            <li>Error boundaries and code splitting</li>
-                            <li>Performance optimization techniques</li>
-                        </ul>
-                    </div>
+                    <h3>Advanced React Concepts</h3>
+                    <ul>
+                        <li>Hooks (useState, useEffect)</li>
+                        <li>Context API</li>
+                        <li>Higher-Order Components</li>
+                        <li>Error Boundaries</li>
+                        <li>Render Props Pattern</li>
+                    </ul>
                 </div>
                 
                 <div class="module-card">
-                    <div class="module-header">
-                        <i class="fas fa-plug module-icon"></i>
-                        <h3>React Ecosystem</h3>
-                    </div>
-                    <div class="module-content">
-                        <ul>
-                            <li>Routing with React Router</li>
-                            <li>State management with Redux</li>
-                            <li>Working with REST APIs</li>
-                            <li>Introduction to Next.js</li>
-                            <li>Testing React applications</li>
-                        </ul>
-                    </div>
+                    <h3>State Management</h3>
+                    <ul>
+                        <li>Redux Fundamentals</li>
+                        <li>Redux Toolkit</li>
+                        <li>Middleware & Async Actions</li>
+                        <li>Context vs Redux</li>
+                        <li>State Management Best Practices</li>
+                    </ul>
                 </div>
                 
                 <div class="module-card">
-                    <div class="module-header">
-                        <i class="fas fa-rocket module-icon"></i>
-                        <h3>Real-world Projects</h3>
-                    </div>
-                    <div class="module-content">
-                        <ul>
-                            <li>E-commerce application</li>
-                            <li>Social media dashboard</li>
-                            <li>Real-time chat application</li>
-                            <li>Portfolio project deployment</li>
-                            <li>Industry best practices</li>
-                        </ul>
-                    </div>
+                    <h3>Routing & API Integration</h3>
+                    <ul>
+                        <li>React Router DOM</li>
+                        <li>Dynamic Routing</li>
+                        <li>Protected Routes</li>
+                        <li>REST API Integration</li>
+                        <li>GraphQL with Apollo</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Testing & Optimization</h3>
+                    <ul>
+                        <li>Jest & React Testing Library</li>
+                        <li>Component Testing</li>
+                        <li>Performance Optimization</li>
+                        <li>Code Splitting</li>
+                        <li>Lazy Loading</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Project Deployment</h3>
+                    <ul>
+                        <li>Building for Production</li>
+                        <li>Deployment Strategies</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Server-side Rendering</li>
+                        <li>Final Project Development</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Features Section -->
-    <section class="section features" id="features">
+    
+    <section id="placement">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Our React JS Training?</h2>
-                <p>Industry-leading program designed for career success</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-laptop-code feature-icon"></i>
-                    <h3>Hands-on Learning</h3>
-                    <p>Practical, project-based curriculum with real-world applications</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-chalkboard-teacher feature-icon"></i>
-                    <h3>Expert Instructors</h3>
-                    <p>Learn from industry professionals with 8+ years of experience</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-briefcase feature-icon"></i>
-                    <h3>Placement Assistance</h3>
-                    <p>Access to our exclusive job portal and interview preparation</p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-certificate feature-icon"></i>
-                    <h3>Industry Certification</h3>
-                    <p>Globally recognized certificate upon course completion</p>
-                </div>
+            <div class="placement">
+                <h2>Placement Assistance</h2>
+                <p>Our dedicated placement cell provides 100% placement assistance with resume building, interview preparation, and direct connections to top tech companies in Mumbai and across India.</p>
+                <a href="https://www.justacademy.co/student-placed" class="btn">View Placement Success</a>
             </div>
         </div>
     </section>
-
-    <!-- Enhanced CTA Section -->
-    <section class="cta-section">
-        <div class="cta-decoration">
-            <div class="cta-circle circle-1"></div>
-            <div class="cta-circle circle-2"></div>
-            <div class="cta-circle circle-3"></div>
-        </div>
-        <div class="container cta-container">
-            <h2>Ready to Launch Your Career in React Development?</h2>
-            <p>Join our hands-on React JS training in Mumbai and gain the skills that top companies are looking for. Limited seats available for the next batch!</p>
-            <a href="https://www.justacademy.co/register-for-course-demo" class="cta-btn">
-                <i class="fas fa-calendar-check"></i> Book Your Free Demo Now
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
+    
+    <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="https://www.justacademy.co/student-placed">Placement Assistance</a>
-                <a href="https://www.justacademy.co/course-detail/react-js-training">Course Details</a>
-                <a href="https://www.justacademy.co/contact">Contact Us</a>
-                <a href="https://www.justacademy.co/">All Courses</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Mumbai Training Center</p>
+                    <p>Phone: +91 9876543210</p>
+                    <p>Email: mumbai@justacademy.co</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="https://www.justacademy.co/" style="color:#cbd5e1;">Explore All Courses</a></p>
+                    <p><a href="https://www.justacademy.co/register-for-course-demo" style="color:#cbd5e1;">Book a Demo</a></p>
+                    <p><a href="https://www.justacademy.co/student-placed" style="color:#cbd5e1;">Placement Records</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Hands-on React Training</h3>
+                    <p>Practical, industry-focused React JS training in Mumbai. Learn from experts and build real-world applications.</p>
+                </div>
             </div>
-            <p class="copyright">© 2023 JustAcademy - React JS Training in Mumbai. All Rights Reserved. Join our hands-on training program and become a React expert in just 12 weeks!</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JustAcademy. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Particles JS -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Initialize particles.js
+        // Particles.js configuration
         particlesJS('particles-js', {
             particles: {
-                number: { value: 100, density: { enable: true, value_area: 800 } },
-                color: { value: "#61dafb" },
-                shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
-                opacity: { value: 0.6, random: true },
-                size: { value: 3, random: true },
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#2563eb" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 4, random: true },
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: "#61dafb",
+                    color: "#93c5fd",
                     opacity: 0.4,
                     width: 1
                 },
                 move: {
                     enable: true,
-                    speed: 2.5,
+                    speed: 2,
                     direction: "none",
                     random: true,
                     straight: false,
@@ -844,55 +443,28 @@
                     onhover: { enable: true, mode: "grab" },
                     onclick: { enable: true, mode: "push" },
                     resize: true
-                },
-                modes: {
-                    grab: { distance: 160, line_linked: { opacity: 1 } },
-                    push: { particles_nb: 6 }
                 }
-            },
-            retina_detect: true
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
             }
         });
-
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
         
-        mobileToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+        // Animation for module cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.module-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.transform = 'translateY(50px)';
+                card.style.opacity = '0';
+                card.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+                observer.observe(card);
             });
         });
     </script>
